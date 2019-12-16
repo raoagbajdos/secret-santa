@@ -20,6 +20,6 @@ class SecretSanta < Sinatra::Base
     @email = $person_1.email
     erb :santa_list
   end
-  
+
 run! if app_file == $0
 end

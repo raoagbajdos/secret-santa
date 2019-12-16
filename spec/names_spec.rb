@@ -8,10 +8,10 @@ describe '.all' do
     connection.exec("INSERT INTO bookmarks (name) VALUES('Simone');")
     connection.exec("INSERT INTO bookmarks (name) VALUES('Sonia');")
 
-    people = People.all
+    participant = Participants.all
 
-    expect(people).to include('Sujesh')
-    expect(people).to include('Simone')
-    expect(people).to include('Sonia')
+    expect(participant).to include('Sujesh')
+    expect(participant).to include('Simone')
+    expect(participant).to include('Sonia')
   end
 end
