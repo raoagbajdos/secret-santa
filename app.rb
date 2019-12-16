@@ -8,18 +8,18 @@ class SecretSanta < Sinatra::Base
   end
 
 
-post '/names' do
+  post '/names' do
 
-  $person_1 = Person.new(params[:name], params[:email])
+    $person_1 = Person.new(params[:name], params[:email])
 
-redirect '/santa_list'
-end
+    redirect '/santa_list'
+  end
 
-get '/santa_list' do
-  @name = $person_1.name
-  @email = $person_1.email
-  erb :santa_list
-end
-
+  get '/santa_list' do
+    @name = $person_1.name
+    @email = $person_1.email
+    erb :santa_list
+  end
+  
 run! if app_file == $0
 end
